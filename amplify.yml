@@ -3,8 +3,7 @@ backend:
   phases:
     build:
       commands:
-        - '# Execute Amplify CLI with the helper script'
-        - amplifyPush --simple
+        - npm ci
 frontend:
   phases:
     preBuild:
@@ -14,7 +13,7 @@ frontend:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: dist/ng-amplify-app
+    baseDirectory: dist/
     files:
       - '**/*'
   cache:
